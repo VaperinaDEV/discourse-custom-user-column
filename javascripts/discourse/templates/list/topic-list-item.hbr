@@ -81,5 +81,6 @@
         {{format-date topic.bumpedAt format="tiny"}}
       </a>
       <span class="editor"><a href="/users/{{topic.last_poster_username}}" data-auto-route="true" data-user-card="{{topic.last_poster_username}}">{{topic.last_poster_username}}</a></span>
+    {{/if}}
   </div>
 </td>
