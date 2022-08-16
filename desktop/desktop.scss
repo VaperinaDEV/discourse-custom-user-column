@@ -9,6 +9,9 @@
       flex-direction: column;
       a {
         color: var(--primary-high);
+        span.relative-date {
+          font-wight: 600;
+        }
       }
       .editor a {
         font-size: var(--font-down-1);
