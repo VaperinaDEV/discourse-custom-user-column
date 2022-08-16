@@ -1,10 +1,10 @@
-.last-post {
+.custom-user-column {
   &.topic-list-data {
     display: flex;
     gap: 0.5em;
     align-items: center;
     font-size: var(--font-0);
-    .poster-info {
+    .custom-user-column-info {
       display: flex;
       flex-direction: column;
       a {
