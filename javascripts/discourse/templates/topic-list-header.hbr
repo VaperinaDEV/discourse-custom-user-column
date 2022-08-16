@@ -14,5 +14,9 @@
   {{raw "topic-list-header-column" sortable=sortable number='true' order='op_likes' name='likes' ariaLabel=(i18n "sr_op_likes")}}
 {{/if}}
 {{raw "topic-list-header-column" sortable=sortable number='true' order='posts' name='replies' ariaLabel=(i18n "sr_replies")}}
-{{raw "topic-list-header-column" sortable=sortable order='activity' forceName=(theme-i18n 'last_post')}}
+{{#if (theme-setting 'author_column')}}
+  {{raw "topic-list-header-column" sortable=sortable order='activity' forceName=(theme-i18n 'author_header')}}
+  {{else}}
+  {{raw "topic-list-header-column" sortable=sortable order='activity' forceName=(theme-i18n 'last_header')}}
+{{/if}}
 {{~raw-plugin-outlet name="topic-list-header-after"~}}
