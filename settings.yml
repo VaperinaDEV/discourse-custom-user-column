@@ -1,0 +1,3 @@
+author_column:
+  type: bool
+  default: false
