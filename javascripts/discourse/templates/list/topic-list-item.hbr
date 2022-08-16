@@ -73,7 +73,7 @@
   <div class="custom-user-column-info">
     {{#if (theme-setting 'author_column')}}
       <a href="{{topic.firstPostUrl}}">
-        {{format-date topic.bumpedAt format="tiny"}}
+        {{format-date topic.createdAt format="tiny"}}
       </a>
       <span class="editor"><a href="/users/{{topic.creator.username}}" data-auto-route="true" data-user-card="{{topic.creator.username}}">{{topic.creator.username}}</a></span>
       {{else}}
