@@ -20,6 +20,9 @@
   }
 }
 
-.topic-list .posts {
-  width: auto;
+.topic-list {
+  .posts,
+  .created {
+    width: 120px;
+  }
 }
