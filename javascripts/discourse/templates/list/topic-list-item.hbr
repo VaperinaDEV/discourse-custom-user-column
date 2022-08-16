@@ -62,14 +62,28 @@
   </td>
 {{/if}}
 
-<td class="last-post topic-list-data">
-<div class="poster-avatar">
-  <a href="{{topic.lastPostUrl}}" data-user-card="{{topic.last_poster_username}}">{{avatar topic.lastPosterUser imageSize="medium"}}</a>
-</div>
-<div class="poster-info">
-  <a href="{{topic.lastPostUrl}}">
-    {{format-date topic.bumpedAt format="tiny"}}
-  </a>
-  <span class="editor"><a href="/users/{{topic.last_poster_username}}" data-auto-route="true" data-user-card="{{topic.last_poster_username}}">{{topic.last_poster_username}}</a></span>
-</div>
-</td>
+{{#if (theme-setting 'author_column')}}
+  <td class="authors-column topic-list-data">
+    <div class="author-avatar">
+      <a href="{{topic.createdAt}}" data-user-card="{{topic.author_username}}">{{avatar topic.author imageSize="medium"}}</a>
+    </div>
+    <div class="poster-info">
+      <a href="{{topic.lastPostUrl}}">
+        {{format-date topic.bumpedAt format="tiny"}}
+      </a>
+      <span class="editor"><a href="/users/{{topic.author_username}}" data-auto-route="true" data-user-card="{{topic.author_username}}">{{topic.author_username}}</a></span>
+    </div>
+  </td>
+  {{else}}
+  <td class="last-post-column topic-list-data">
+    <div class="poster-avatar">
+      <a href="{{topic.lastPostUrl}}" data-user-card="{{topic.last_poster_username}}">{{avatar topic.lastPosterUser imageSize="medium"}}</a>
+    </div>
+    <div class="poster-info">
+      <a href="{{topic.lastPostUrl}}">
+        {{format-date topic.bumpedAt format="tiny"}}
+      </a>
+      <span class="editor"><a href="/users/{{topic.last_poster_username}}" data-auto-route="true" data-user-card="{{topic.last_poster_username}}">{{topic.last_poster_username}}</a></span>
+    </div>
+  </td>
+{{/if}}
